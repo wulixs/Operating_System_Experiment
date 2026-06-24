@@ -263,48 +263,48 @@ int main() {
     char process_name[20];
     int size;
 
-    // ======
-    printf("****** 第一步 ******\n");
-    printf("依次分配p1：200字节，p2：300字节，p3：100字节_\n");
-    printf("预期结果：p1占据0-199，p2占据200-499，p3占据500-599，剩余空闲块600-1023_\n\n");
-    printf("\n分配p1：200字节_\n");
-    allocate_memory(manager, 200, "p1");
-    printf("\n分配p2：300字节_\n");
-    allocate_memory(manager, 300, "p2");
-    printf("\n分配p3：100字节_\n");
-    allocate_memory(manager, 100, "p3");
-    print_memory_status(manager);
+    // // ======
+    // printf("****** 第一步 ******\n");
+    // printf("依次分配p1：200字节，p2：300字节，p3：100字节_\n");
+    // printf("预期结果：p1占据0-199，p2占据200-499，p3占据500-599，剩余空闲块600-1023_\n\n");
+    // printf("\n分配p1：200字节_\n");
+    // allocate_memory(manager, 200, "p1");
+    // printf("\n分配p2：300字节_\n");
+    // allocate_memory(manager, 300, "p2");
+    // printf("\n分配p3：100字节_\n");
+    // allocate_memory(manager, 100, "p3");
+    // print_memory_status(manager);
 
-    printf("****** 第二步 ******\n");
-    printf("释放p2内存_\n");
-    printf("预期结果：p1占据0-199，p3占据500-599，剩余空闲块200-499和600-1023_\n\n");
-    deallocate_memory(manager, "p2");
-    print_memory_status(manager);
+    // printf("****** 第二步 ******\n");
+    // printf("释放p2内存_\n");
+    // printf("预期结果：p1占据0-199，p3占据500-599，剩余空闲块200-499和600-1023_\n\n");
+    // deallocate_memory(manager, "p2");
+    // print_memory_status(manager);
 
-    printf("****** 第三步 ******\n");
-    printf("分配p4：250字节_\n");
-    printf("预期结果：p1占据0-199，p3占据500-599，p4占据200-449，剩余空闲块450-499和600-1023_\n\n");
-    allocate_memory(manager, 250, "p4");
-    print_memory_status(manager);
+    // printf("****** 第三步 ******\n");
+    // printf("分配p4：250字节_\n");
+    // printf("预期结果：p1占据0-199，p3占据500-599，p4占据200-449，剩余空闲块450-499和600-1023_\n\n");
+    // allocate_memory(manager, 250, "p4");
+    // print_memory_status(manager);
 
-    printf("****** 第四步 ******\n");
-    printf("申请p5：450字节_\n");
-    printf("预期结果：分配失败，因为没有足够的连续内存块_\n\n");
-    allocate_memory(manager, 450, "p5");
-    print_memory_status(manager);
+    // printf("****** 第四步 ******\n");
+    // printf("申请p5：450字节_\n");
+    // printf("预期结果：分配失败，因为没有足够的连续内存块_\n\n");
+    // allocate_memory(manager, 450, "p5");
+    // print_memory_status(manager);
 
-    printf("释放所有内存_\n");
-    free_memory_manager(manager);
-    // ======
-
-
+    // printf("释放所有内存_\n");
+    // free_memory_manager(manager);
+    // // ======
 
 
-    // 初始化1024字节的内存
-    manager = init_memory_manager(1024);
+
+
+    // // 初始化1024字节的内存
+    // manager = init_memory_manager(1024);
     
-    printf("初始化内存管理器，总内存: %d 字节\n", manager->total_memory);
-    print_memory_status(manager);
+    // printf("初始化内存管理器，总内存: %d 字节\n", manager->total_memory);
+    // print_memory_status(manager);
 
     while (1) {
         printf("\n=== 内存管理系统 ===\n");
